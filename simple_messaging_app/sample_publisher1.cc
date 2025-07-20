@@ -112,7 +112,7 @@ int main()
     char* key = (char*)ke.c_str();
     size_t key_len = strlen(key);
     size_t payload_len = strlen(payload);
-    std::string brokers = "<machine_ip>:9092";
+    std::string brokers = "<broker_ip>:9092";
     Publisher::instance(brokers)->publish_msg(topic, payload, payload_len, key, key_len);
     return 0;
 }
