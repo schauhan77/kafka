@@ -12,13 +12,13 @@ You need to change ips to your machine ip or localhost
 
 How to run cluster:
 a) Generate an ID for the Kafka cluster
-   # bin/kafka-storage.sh random-uuid
+   > bin/kafka-storage.sh random-uuid
 b) Set up log directories for each node [broker or controller] using same uuid
-   # bin/kafka-storage.sh format -t XZ-zdeleT9GUd3IHr54lsg -c config/kraft/controller.properties
-   # bin/kafka-storage.sh format -t XZ-zdeleT9GUd3IHr54lsg -c config/kraft/broker.properties
+   > bin/kafka-storage.sh format -t XZ-zdeleT9GUd3IHr54lsg -c config/kraft/controller.properties
+   > bin/kafka-storage.sh format -t XZ-zdeleT9GUd3IHr54lsg -c config/kraft/broker.properties
 c) Run controller and broker
-   # bin/kafka-server-start.sh config/kraft/broker.properties
-   # bin/kafka-server-start.sh config/kraft/controller.properties
+   > bin/kafka-server-start.sh config/kraft/broker.properties
+   > bin/kafka-server-start.sh config/kraft/controller.properties
 
 ii) Install librdkafka library
 https://github.com/confluentinc/librdkafka
@@ -42,7 +42,7 @@ ii) Run consumer [binary of above compilation] and then run producer to send you
 sample consumer and producer output on running:
 
 consumer:
-# ./a.out
+> ./a.out
 consumer is created
 adding topic topic1
 EOF Consumer error: Broker: No more messages
@@ -55,7 +55,7 @@ this is my first event-msg
 EOF Consumer error: Broker: No more messages
 
 Producer:
-# ./a.out
+> ./a.out
 published to topic: topic1
 after flush
 message(s) were delivered
