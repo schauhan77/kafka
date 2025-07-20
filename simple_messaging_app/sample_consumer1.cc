@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <iostream>
 
-const char *brokers = "<machine_ip>:9092";
+const char *brokers = "<broker_ip>:9092";
 const char *group_id = "group_1";
 const char *auto_res = "earliest";
 
