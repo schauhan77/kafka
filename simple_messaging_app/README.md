@@ -12,13 +12,13 @@ You need to change ips to your machine ip or localhost
 
 ### How to run cluster:
 a) Generate an ID for the Kafka cluster
-   > bin/kafka-storage.sh random-uuid
+   'bin/kafka-storage.sh random-uuid'
 b) Set up log directories for each node [broker or controller] using same uuid
-   > bin/kafka-storage.sh format -t XZ-zdeleT9GUd3IHr54lsg -c config/kraft/controller.properties
-   > bin/kafka-storage.sh format -t XZ-zdeleT9GUd3IHr54lsg -c config/kraft/broker.properties
+   'bin/kafka-storage.sh format -t XZ-zdeleT9GUd3IHr54lsg -c config/kraft/controller.properties'
+   'bin/kafka-storage.sh format -t XZ-zdeleT9GUd3IHr54lsg -c config/kraft/broker.properties'
 c) Run controller and broker
-   > bin/kafka-server-start.sh config/kraft/broker.properties
-   > bin/kafka-server-start.sh config/kraft/controller.properties
+    'bin/kafka-server-start.sh config/kraft/broker.properties'
+    'bin/kafka-server-start.sh config/kraft/controller.properties'
 
 ## Install librdkafka library
 https://github.com/confluentinc/librdkafka
@@ -29,20 +29,20 @@ i) you need to mention broker ip:port [<machine_ip>:9092] in sample_consumer1.cc
 
 
 # Compile sample_consumer1.cc and sample_publisher1.cc like this :
-g++ sample_consumer1.cc -I /libkafka/common/common/librdkafka/include/ /lib64/librdkafka.so.1
-g++ sample_producer1.cc -I /libkafka/common/common/librdkafka/include/ /lib64/librdkafka.so.1
+'g++ sample_consumer1.cc -I /libkafka/common/common/librdkafka/include/ /lib64/librdkafka.so.1'
+'g++ sample_producer1.cc -I /libkafka/common/common/librdkafka/include/ /lib64/librdkafka.so.1'
 
 Above path should be updated accordingly
 
 
 # Running app:
-i) start the cluster by running controller and broker as mentioned above
-ii) Run consumer [binary of above compilation] and then run producer to send your msg
+## start the cluster by running controller and broker as mentioned above
+## Run consumer [binary of above compilation] and then run producer to send your msg
 
-sample consumer and producer output on running:
+### sample consumer and producer output on running:
 
-consumer:
-> ./a.out
+#### consumer:
+' ./a.out'
 consumer is created
 adding topic topic1
 EOF Consumer error: Broker: No more messages
@@ -54,8 +54,8 @@ Hello
 this is my first event-msg
 EOF Consumer error: Broker: No more messages
 
-Producer:
-> ./a.out
+#### Producer:
+'./a.out'
 published to topic: topic1
 after flush
 message(s) were delivered
