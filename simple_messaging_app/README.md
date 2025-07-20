@@ -35,7 +35,7 @@ https://github.com/confluentinc/librdkafka
 
 
 ## Imp points:
-i) you need to mention broker ip:port [<machine_ip>:9092] in sample_consumer1.cc and sample_publisher1.cc
+i) you need to mention broker ip:port [<broker_ip>:9092] in sample_consumer1.cc and sample_publisher1.cc
 
 
 ## Compile sample_consumer1.cc and sample_publisher1.cc like this :
